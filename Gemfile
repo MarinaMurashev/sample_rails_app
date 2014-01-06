@@ -7,6 +7,7 @@ gem "bootstrap-sass"
 group :development, :test do
   gem "rspec-rails"
   gem "guard-rspec"
+  gem "annotate"
 end
 
 group :assets do
