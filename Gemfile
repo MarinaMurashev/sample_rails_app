@@ -24,6 +24,7 @@ group :test do
   gem "rb-fsevent", :require => false
   gem "growl"
   gem "guard-spork"
+  gem "factory_girl_rails"
 end
 
 group :production do
