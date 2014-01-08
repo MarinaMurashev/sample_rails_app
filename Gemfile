@@ -21,10 +21,12 @@ gem "jquery-rails", "3.0.4"
 
 group :test do
   gem "capybara", "1.1.2"
-  gem "rb-fsevent", :require => false
+  gem "rb-fsevent", "0.9.4", require: false
   gem "growl", "1.0.3"
   gem "guard-spork", "1.5.1"
   gem "factory_girl_rails", "4.3.0"
+  gem "cucumber-rails", "1.4.0", require: false
+  gem "database_cleaner", "1.2.0"
 end
 
 group :production do
