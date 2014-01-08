@@ -16,4 +16,9 @@ module SessionsHelper
   def current_user=(user)
     @current_user = user
   end
+
+  def sign_out
+    self.current_user = nil
+    cookies.delete(:remember_token)
+  end
 end
