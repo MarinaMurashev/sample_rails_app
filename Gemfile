@@ -2,13 +2,13 @@ source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
 gem "rails", "4.0.2"
-gem "bootstrap-sass"
-gem "bcrypt-ruby"
+gem "bootstrap-sass", "3.0.3.0"
+gem "bcrypt-ruby", "3.1.2"
 
 group :development, :test do
-  gem "rspec-rails"
-  gem "guard-rspec"
-  gem "annotate"
+  gem "rspec-rails", "2.14.1"
+  gem "guard-rspec", "4.2.3"
+  gem "annotate", "2.6.1"
 end
 
 group :assets do
@@ -17,25 +17,25 @@ group :assets do
   gem "uglifier", ">= 1.3.0"
 end
 
-gem "jquery-rails"
+gem "jquery-rails", "3.0.4"
 
 group :test do
   gem "capybara", "1.1.2"
   gem "rb-fsevent", :require => false
-  gem "growl"
-  gem "guard-spork"
-  gem "factory_girl_rails"
+  gem "growl", "1.0.3"
+  gem "guard-spork", "1.5.1"
+  gem "factory_girl_rails", "4.3.0"
 end
 
 group :production do
-  gem "rails_12factor"
+  gem "rails_12factor", "0.0.2"
 end
 
-gem "pg"
+gem "pg", "0.17.1"
 
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem "turbolinks"
+gem "turbolinks", "2.1.0"
 
 ruby "2.0.0"
 
