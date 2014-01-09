@@ -81,6 +81,21 @@ describe "Authentication" do
             it { should have_selector("title", text: "Sign in") }
           end
         end
+
+        describe "as non-admin user" do
+          let(:user) { FactoryGirl.create(:user) }
+          let(:non_admin) { FactoryGirl.create(:user) }
+
+          before do
+            visit signin_path
+            signin non_admin
+          end
+
+          describe "submitting a DELETE request to the Users#destroy action" do
+            before { delete user_path(user) }
+            specify { response.should redirect_to(root_path) }
+          end
+        end
       end
 
       describe "as wrong user" do
