@@ -16,7 +16,8 @@ describe "Authentication" do
 
     describe "with invalid information" do
       before { click_button "Sign in" }
-
+      it { should_not have_link("Profile") }
+      it { should_not have_link("Settings") }
       it { should have_error_message("Invalid") }
 
       describe "after visiting another page" do
