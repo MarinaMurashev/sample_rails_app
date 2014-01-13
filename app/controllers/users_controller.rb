@@ -16,9 +16,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    if signed_in? 
-      redirect_to root_path 
-    else 
+      redirect_to root_path and return if signed_in?
+      
       @user = User.new(user_params)
       if @user.save
         sign_in @user
@@ -27,7 +26,6 @@ class UsersController < ApplicationController
       else
         render "new"
       end
-    end
   end
 
   def edit
