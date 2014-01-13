@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def create
       redirect_to root_path and return if signed_in?
-      
+
       @user = User.new(user_params)
       if @user.save
         sign_in @user
@@ -46,9 +46,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User destroyed."
-    redirect_to users_path
+    if current_user == User.find(params[:id])
+      redirect_to root_path
+    else
+      User.find(params[:id]).destroy
+      flash[:success] = "User destroyed."
+      redirect_to users_path
+    end
   end
 
   private
