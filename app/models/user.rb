@@ -13,6 +13,7 @@
 #
 
 class User < ActiveRecord::Base
+  has_many :microposts
   has_secure_password
 
   before_save { self.email.downcase! }
