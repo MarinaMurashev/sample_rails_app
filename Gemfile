@@ -12,6 +12,7 @@ group :development, :test do
   gem "rspec-rails", "2.14.1"
   gem "guard-rspec", "4.2.3"
   gem "annotate", "2.6.1"
+  gem "pry"
 end
 
 group :assets do
